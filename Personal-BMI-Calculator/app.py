@@ -271,7 +271,7 @@ with col2:
                 st.write("• Control portion sizes and avoid overeating.")
                 st.write("• Aim for consistent meal times.")
                 
-             with st.expander("🏃 Exercise"):
+            with st.expander("🏃 Exercise"):
 
                 st.write("• Get at least 150 minutes of moderate exercise per week.")
                 st.write("• Walk 8,000–10,000 steps daily.")
