@@ -1,10 +1,9 @@
 import streamlit as st
-# PAGE CONFIG
 st.set_page_config(
     page_title="Deniel's BMI Calculator",
     layout="wide"
 )
-# LIGHT / DARK MODE
+# light and dark
 
 title_col, toggle_col = st.columns([6, 1])
 
@@ -143,9 +142,7 @@ else:
     """, unsafe_allow_html=True)
 # Layout
 col1, spacer, col2 = st.columns([.5, 0.1, .5])
-# ==========================
-# INPUT SECTION
-# ==========================
+# input section
 
 with col1:
 
@@ -180,9 +177,7 @@ with col1:
         use_container_width=True
     )
 
-# ==========================
-# RESULT SECTION
-# ==========================
+# results
 
 with col2:
 
@@ -196,7 +191,6 @@ with col2:
 
         bmi = weight / ((height / 100) ** 2)
 
-        # User Summary
         st.info(
             "👤 " + name +
             " | " + gender +
@@ -209,10 +203,7 @@ with col2:
             st.info("You are a Minor")
 
         st.metric("BMI", round(bmi, 1))
-
-        # ==========================
-        # UNDERWEIGHT
-        # ==========================
+        # underweight
 
         if bmi < 18.5:
 
@@ -265,13 +256,46 @@ with col2:
                 st.write("• Pull-ups: 3 sets of 3 reps")
                 st.write("• Weight Training: 3 times per week")
 
-        # ==========================
-        # NORMAL
-        # ==========================
+        # normal weight
 
         elif bmi < 25:
 
             st.success("✅ Normal Weight - Keep it up!")
+            st.markdown("---")
+
+            with st.expander("🥗 Nutrition"):
+
+                st.write("• Eat a balanced diet with protein, carbohydrates, healthy fats, fruits, and vegetables.")
+                st.write("• Drink at least 2–3 liters of water daily")
+                st.write("• Limit sugary drinks and processed foods.")
+                st.write("• Control portion sizes and avoid overeating.")
+                st.write("• Aim for consistent meal times.")
+                
+             with st.expander("🏃 Exercise"):
+
+                st.write("• Get at least 150 minutes of moderate exercise per week.")
+                st.write("• Walk 8,000–10,000 steps daily.")
+                st.write("• Include strength training 2–3 times per week.")
+                st.write("• Stretch regularly to improve flexibility.")
+                st.write("• Stay active throughout the day and avoid sitting for long periods.")
+                 
+             with st.expander("😴 Sleep"):
+                st.write("• Get 7–9 hours of sleep every night.")
+                st.write("• Maintain a consistent sleep schedule.")
+                st.write("• Avoid screens 30–60 minutes before bedtime.")
+
+             with st.expander("💪 Muscle & Strength"):
+                st.write("• Focus on progressive strength training.")
+                st.write("• Consume enough protein to support muscle growth and recovery.")
+                st.write("• Allow your body time to recover between workouts.")
+
+             with st.expander("❤️ Mental Health"):
+                st.write("• Manage stress through hobbies, exercise, or meditation.")
+                st.write("• Spend time with family and friends.")
+                st.write("• Maintain a healthy work-life balance.")
+
+
+                
 
         # ==========================
         # OVERWEIGHT
