@@ -261,6 +261,8 @@ with col2:
         elif bmi < 25:
 
             st.success("✅ Normal Weight - Keep it up!")
+
+            st.header("Maintain your health by: ")
             st.markdown("---")
 
             with st.expander("🥗 Nutrition"):
