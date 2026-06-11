@@ -15,7 +15,25 @@ with title_col:
     )
 
 with toggle_col:
-    dark_mode = st.toggle("🌙")
+
+    dark_mode = st.toggle("", key="dark_mode")
+
+    st.markdown(
+        f"""
+        <div style="
+            display:flex;
+            align-items:center;
+            gap:8px;
+            margin-top:-65px;
+            margin-left:55px;
+        ">
+            <span style="font-size:35px;">
+                {'🌙' if dark_mode else '☀️'}
+            </span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 if dark_mode:
 
