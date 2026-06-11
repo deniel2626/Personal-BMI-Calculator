@@ -263,8 +263,6 @@ with col2:
             st.success("✅ Normal Weight - Keep it up!")
 
             st.header("Maintain by: ")
-            st.markdown("---")
-
             with st.expander("🥗 Nutrition"):
 
                 st.write("• Eat a balanced diet with protein, carbohydrates, healthy fats, fruits, and vegetables.")
