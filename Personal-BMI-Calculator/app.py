@@ -279,17 +279,17 @@ with col2:
                 st.write("• Stretch regularly to improve flexibility.")
                 st.write("• Stay active throughout the day and avoid sitting for long periods.")
                  
-             with st.expander("😴 Sleep"):
+            with st.expander("😴 Sleep"):
                 st.write("• Get 7–9 hours of sleep every night.")
                 st.write("• Maintain a consistent sleep schedule.")
                 st.write("• Avoid screens 30–60 minutes before bedtime.")
 
-             with st.expander("💪 Muscle & Strength"):
+            with st.expander("💪 Muscle & Strength"):
                 st.write("• Focus on progressive strength training.")
                 st.write("• Consume enough protein to support muscle growth and recovery.")
                 st.write("• Allow your body time to recover between workouts.")
 
-             with st.expander("❤️ Mental Health"):
+            with st.expander("❤️ Mental Health"):
                 st.write("• Manage stress through hobbies, exercise, or meditation.")
                 st.write("• Spend time with family and friends.")
                 st.write("• Maintain a healthy work-life balance.")
